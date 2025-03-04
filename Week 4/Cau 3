@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   char daytab[2][12] = {
+  {31,28,31,30,31,30,31,31,30,31,30,31},
+  {31,29,31,30,31,30,31,31,30,31,30,31}
+};
+char daytab1[2][12] = {
+  31,28,31,30,31,30,31,31,30,31,30,31,
+  31,29,31,30,31,30,31,31,30,31,30,31
+};
+
+    for(int i=0; i<2; i++){
+        for(int j= 0 ;j<12; j++){
+            cout << daytab1[i][j] << ' '; // cout << daytab1[i][j] cho truong hop kia
+            }
+        cout << endl;
+    }
+
+    
+    /*
+     char daytab3[2][12] = {
+        {31, 28, 31}, // thieu phan tu
+        {31, 29, 31, 30} thieu phan tu
+    };
+
+    char daytab4[][12] = {
+        {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+        {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+    };
+
+    char daytab5[2][] = {
+        {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+        {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+    };
+    
+    */
+}
+
+
+a: cả 2 cách đều được
+b:Nếu chỉ khởi tạo một phần của mảng, các giá trị còn lịa mặc đinhk là 0;
+c:nếu thiếu hàng ( arr[][12] ) thi được, nhưng nghược lại thì sẽ bị lỗi biên dịch
