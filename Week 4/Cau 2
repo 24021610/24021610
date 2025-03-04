@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+#define N 6 // thay doi gia tri cua n de xem tung truong hop mot
+
+char globalStr1[6]; //2a
+char globalStr2[N] = "abcd"; //2b
+//char globalStr3[3] = "abcd";
+char globalStr4[] = "abcd"; //2c
+
+int main() {
+    char localStr1[5]; //2a
+    char localStr2[N] = "abcd"; //2b
+    //char localStr3[3] = "abcd";
+    char localStr4[] = "abcd"; //2c
+
+    cout << globalStr1 << endl;
+    cout << globalStr2 << endl;
+    cout << globalStr3 << endl;
+    cout << globalStr4 << endl;
+    cout << sizeof(globalStr4) << endl;
+
+    cout << localStr1 << endl;
+    cout << localStr2 << endl;
+    cout << localStr4 << endl;
+    cout << sizeof(localStr4) << endl;
+
+    return 0;
+}
+// Mảng kích thước N lưu được string độ dài tối đa là n-1 (mot vi tri cho '/0' )
