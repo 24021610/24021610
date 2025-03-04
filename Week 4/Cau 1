@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+
+#define N 6
+using namespace std;
+
+int globalArr1[5]; // Cau 1 a
+
+
+int globalArr2[N] = {1, 2, 3, 4}; // cau 1 b
+// int globalArr3[2] = {1, 2, 3, 4}; //cau 1 b
+int globalArr4[] = {1, 2, 3, 4}; // cau 1 c
+
+void printArray(int arr[], int size, const string &name) {
+    cout << name << ": ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+
+    int localArr1[5]; //1 a
+    int localArr2[N] = {1, 2, 3, 4}; //1 b
+    int localArr2[N3 = {1, 2, 3, 4};// 1 b
+    int localArr4[] = {1, 2, 3, 4}; // 1 c
+
+
+    printArray(globalArr1, 5, "globalArr1);
+    printArray(globalArr2, N, "globalArr2");
+    printArray(globalArr4, 4, "globalArr4");
+
+    printArray(localArr1, 5, "localArr1);
+    printArray(localArr2, N, "localArr2");
+    printArray(localArr4, 4, "localArr4");
+
+    return 0;
+}
+
+// giá trị của localArr1 thay đổi mỗi lần chạy
+// Các mảng toàn cục luôn = = 0 nếu ko khởi tạo
+// nếu số ptu mà bé hơn số lượng giá trị (vd mảng 3) thì sẽ lỗi
