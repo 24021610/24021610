@@ -1,0 +1,16 @@
+A : Không có lỗi biên dịch, nhưng giá trị đọc được không xác định
+Đọc chỉ số N, N+1 có thể lấy  giá trị của biến khác hoặc phần dữ liệu chưa  hợp lệ.
+Nếu thay đổi thứ tự khai báo biến, giá trị đọc tràn có thể khác nhau, vì vị trí của mảng thay đổi.
+
+
+B. Ghi tràn (gán giá trị vào chỉ số -1, N, N+1,...)
+Việc ghi tràn có thể thay đổi giá trị của các biến khác.
+Nếu ghi vào chỉ số -1 sẽ thay đổi giá trị của biến trước mảng.
+Nếu ghi vào chỉ số N, N+1, có thể ghi đè lên biến hoặc không thuộc mảng.
+Có thể xảy ra lỗi segmentation fault
+
+
+C. Tràn mảng nhiều chiều
+Mảng hai chiều được lưu liên tiếp theo hàng.
+Khi ghi tràn cột ở dòng đầu , có thể sửa đổi dữ liệu của dòng tiếp theo.
+Nếu ghi nhiều, có thể sửa đổi dữ liệu nằm ngoài mảng
